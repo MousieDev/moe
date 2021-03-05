@@ -1,0 +1,31 @@
+stex - simple text editor
+=========================
+stex is an extremely fast and small text editor for Linux and UNIX
+
+
+Requirements
+------------
+None for now.
+
+
+Installation
+------------
+Edit config.mk to match your local setup (stex is installed into
+the /usr/local namespace by default.)
+
+Afterwards enter the following command to build and install stex (if
+necessary as root):
+
+    make clean install
+
+
+Running stex
+------------
+Run stex via any terminal.
+
+control + q to quit.
+
+Configuration
+-------------
+The configuration of stex is done by creating a custom config.h
+and (re)compiling the source code.
