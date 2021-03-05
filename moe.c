@@ -19,7 +19,7 @@
 
 /*** defines ***/
 
-#define MOE_VERSION "1.0"
+#define MOE_VERSION "1.1"
 #define MOE_TAB_STOP 8
 #define MOE_QUIT_TIMES 1
 
@@ -960,8 +960,8 @@ void editorProcessKeypress() {
 
     case CTRL_KEY('q'):
       if (E.dirty && quit_times > 0) {
-        editorSetStatusMessage("WARNING!!! File has unsaved changes. "
-          "Press Ctrl-Q %d more times to quit.", quit_times);
+        editorSetStatusMessage("File has unsaved changes. "
+          "Press C-q %d more time to quit.", quit_times);
         quit_times--;
         return;
       }
@@ -1057,7 +1057,7 @@ int main(int argc, char *argv[]) {
   }
 
   editorSetStatusMessage(
-    "HELP: Ctrl-S = save | Ctrl-Q = quit | Ctrl-F = find");
+    "HELP: C-s = save | C-q = quit | C-f = find");
 
   while (1) {
     editorRefreshScreen();
